@@ -1,4 +1,5 @@
-# label_img_xml_modify_script
+# Breadcrumbslabel_img_xml_modify_script
+
 ---
 
 (完成) 存取手機內的檔案
@@ -6,7 +7,7 @@
 (完成) Android crash
 參考: 
 - [codemy-kivy GUI tutorial](https://www.youtube.com/playlist?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg)參考第#14部 update kivy .kv 檔的方法
-- [kivy 資源](:/af0765d50f0e48859d9d6877f6333358)
+- [kivy 資源](../../undefined)
 
 ## 頁首
 kivy
@@ -263,7 +264,7 @@ etExternalFilesDir(null)则为：/storage/emulated/0/Android/data/com.wintec.hua
 [Android限定]
 非同步處理:
 (暫時用連結,確定解決非同步之後整個搬過來)
-[python 非同步處理](:/d9132338c6f84e719b3f42caf4626ea4)
+[python 非同步處理](../../undefined)
 參考網址: [Creating an Android Background Service in Kivy Application](https://www.youtube.com/watch?v=f57ItZCtliM&t=329s)
  [python for android 的 背景運行service](https://python-for-android.readthedocs.io/en/latest/services/)
 重要,main application 和 background service溝通:
@@ -567,20 +568,20 @@ $ toolchain update touchtracer-ios
 
 1 - 到 Xcode Preferences 把 Apple ID account 加到 Xcode
 
-![af7a4bd7-3d11-48fc-b8f6-63cbd5092094.png](:/153519fc972a457bbecf9b600c78426a)
+![af7a4bd7-3d11-48fc-b8f6-63cbd5092094.png](../../_resources/af7a4bd7-3d11-48fc-b8f6-63cbd5092094.png)
 
 2 - 點 Manage Certificates 後, 點左下方的 + 並點擊 Apple Development  
 
-![be687877-a6e8-4f46-9bf2-17e27bf79a77.png](:/6ba447549d214c72be0cea869e65b3ca)
+![be687877-a6e8-4f46-9bf2-17e27bf79a77.png](../../_resources/be687877-a6e8-4f46-9bf2-17e27bf79a77.png)
 
 3- 在 Project Navigator 點選我們的 Apps project , 然後點擊 "Signing & Capibilities" 
-![eb0c5c67-6107-459c-babb-4884b2bb31fe.png](:/accc4259bba5488885da740fa90ea325)
+![eb0c5c67-6107-459c-babb-4884b2bb31fe.png](../../_resources/eb0c5c67-6107-459c-babb-4884b2bb31fe.png)
 
 4 - 最後點擊 Team 選擇自己的 developer team, 一般是自己的 (Personal Team) 
 
 #### Xcode project Build settings
 
-![スクリーンショット 2023-02-04 午後3.47.24.png](:/ea447f06ba6d4fbf896b665183d68c1b)
+![スクリーンショット 2023-02-04 午後3.47.24.png](../../_resources/スクリーンショット%202023-02-04%20午後3.47.24.png)
 
 這邊有幾個要注意的設定,沒有做到會導致 build failed
 
@@ -666,11 +667,11 @@ Command PhaseScriptExecution failed with a nonzero exit code</summary>
 到 Project setting targets > Build Phases > Run Script>
 勾選 ☑For install builds only
 
-![1*soYRMezHfxS00mZQzC6Rfw.webp](:/58cdf3a10b4747b3ba9d464267c26a2c)
+![1*soYRMezHfxS00mZQzC6Rfw.webp](../../_resources/1_soYRMezHfxS00mZQzC6Rfw.webp)
 
 如果是Xcode 12以下，勾選 Run script only when installing
 
-![1*hLq4dZTxC4mI8mc3fwPIZw.webp](:/d0c4dc003c6743a68eaa9a26e330d5cc)
+![1*hLq4dZTxC4mI8mc3fwPIZw.webp](../../_resources/1_hLq4dZTxC4mI8mc3fwPIZw.webp)
 
 ---
 
@@ -831,7 +832,7 @@ buildozer android debug deploy run
 注意: 第一次build時會連Android需要的NDK之類的大包也一起編譯,需要蠻長的時間2-3小時
 
 編譯完後的 android .apk檔會放在專案資料夾內的 bin 資料夾底下
-![android_app.png](:/68512d74945c4ad1988b8e489f97ea58)
+![android_app.png](../../_resources/android_app.png)
 
 [使用 adb工具安裝apk, adb logcat 排查debug](https://shengyu7697.github.io/android-adb/)
 在 adb logcat 只偵錯python訊息:
@@ -855,7 +856,7 @@ adb logcat -s python
 03-17 20:10:09.214  4188  4229 I python  : Python for android ended.
 ```
 => workaround : 改用 bs4 模組(BeautifulSoup)
-[kivy 沒支援目前版本(4.9.2)的 lxml 的 alternative 方案 ＝》beautifulSoup, xml2dict,  pyquery .](:/a383e72d8b8c486a9ee833164c750c93)
+[kivy 沒支援目前版本(4.9.2)的 lxml 的 alternative 方案 ＝》beautifulSoup, xml2dict,  pyquery .](../../undefined)
 
 ---
 </details>
