@@ -1,13 +1,13 @@
-
-# Breadcrumbslabel_img_xml_modify_script
+# label_img_xml_modify_script
 
 ---
+
 (完成) 存取手機內的檔案
 (未完成) iOS->非同步呼叫camera和auto_predictor
 (完成) Android crash
 參考: 
 - [codemy-kivy GUI tutorial](https://www.youtube.com/playlist?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg)參考第#14部 update kivy .kv 檔的方法
-- [kivy 資源](../../undefined)
+- [kivy 資源](:/af0765d50f0e48859d9d6877f6333358)
 
 ## 頁首
 kivy
@@ -27,7 +27,7 @@ kivy
 	- 安裝xcode
 	- 申請 Apple developer ID
 	- Build iOS App
-
+	
 		- (沒再發生可忽略)地雷1-1.使用 toolchain build kivy error
 		- 重要! 地雷1-2.build `toolchain build python3 kivy` 仍然出現錯誤
 	- Xcode Build 設定
@@ -218,7 +218,7 @@ self.manager.get_screen("second").ids.filechooser.rootpath
 --permission android.permission.WRITE_EXTERNAL_STORAGE \
 --permission android.permission.READ_EXTERNAL_STORAGE \
 --permission android.permission.CAMERA \
-``` 
+```
 - main.py
 ```
 from jnius import autoclass
@@ -264,7 +264,7 @@ etExternalFilesDir(null)则为：/storage/emulated/0/Android/data/com.wintec.hua
 [Android限定]
 非同步處理:
 (暫時用連結,確定解決非同步之後整個搬過來)
-[python 非同步處理](../../undefined)
+[python 非同步處理](:/d9132338c6f84e719b3f42caf4626ea4)
 參考網址: [Creating an Android Background Service in Kivy Application](https://www.youtube.com/watch?v=f57ItZCtliM&t=329s)
  [python for android 的 背景運行service](https://python-for-android.readthedocs.io/en/latest/services/)
 重要,main application 和 background service溝通:
@@ -408,7 +408,7 @@ class MyLayout(Widget):
 ---
 [回頁首](#頁首)
 <h2 id="iOS">kivy for iOS</h2>
- 
+
 - 安裝xcode
 - 申請 Apple developer ID 
 - Build iOS App
@@ -568,20 +568,20 @@ $ toolchain update touchtracer-ios
 
 1 - 到 Xcode Preferences 把 Apple ID account 加到 Xcode
 
-![af7a4bd7-3d11-48fc-b8f6-63cbd5092094.png](../../_resources/af7a4bd7-3d11-48fc-b8f6-63cbd5092094-1.png)
+![af7a4bd7-3d11-48fc-b8f6-63cbd5092094.png](https://i.imgur.com/uWNarAX.png)
 
 2 - 點 Manage Certificates 後, 點左下方的 + 並點擊 Apple Development  
 
-![be687877-a6e8-4f46-9bf2-17e27bf79a77.png](../../_resources/be687877-a6e8-4f46-9bf2-17e27bf79a77-1.png)
+![be687877-a6e8-4f46-9bf2-17e27bf79a77.png](https://i.imgur.com/TLfVxAn.png)
 
 3- 在 Project Navigator 點選我們的 Apps project , 然後點擊 "Signing & Capibilities" 
-![eb0c5c67-6107-459c-babb-4884b2bb31fe.png](../../_resources/eb0c5c67-6107-459c-babb-4884b2bb31fe-1.png)
+![eb0c5c67-6107-459c-babb-4884b2bb31fe.png](https://i.imgur.com/lqeaeoW.png)
 
 4 - 最後點擊 Team 選擇自己的 developer team, 一般是自己的 (Personal Team) 
 
 #### Xcode project Build settings
 
-![スクリーンショット 2023-02-04 午後3.47.24.png](../../_resources/スクリーンショット%202023-02-04%20午後3.47.24-1.png)
+![スクリーンショット 2023-02-04 午後3.47.24.png](https://i.imgur.com/KfZcuLe.png)
 
 這邊有幾個要注意的設定,沒有做到會導致 build failed
 
@@ -595,14 +595,14 @@ $ toolchain update touchtracer-ios
 	## 使用bash 直接撈出 build 過的 bundle id
 
 	[Parsing mobileprovision files in bash?](https://stackoverflow.com/questions/6398364/parsing-mobileprovision-files-in-bash/47763510#47763510)
-
+	
 	If your running this on a machine with mac os x, you can use the following:
 	```
 	/usr/libexec/PlistBuddy -c 'Print :Entitlements:application-identifier' /dev/stdin <<< $(security cms -D -i path_to_mobileprovision) 
 	```
-
+	
 	I created a bash function based on jlawrie's answer to list all .mobileprovision's bundle IDs from the ~/Library/MobileDevice/Provisioning Profiles folder.
-
+	
 	Save this into your .bash_profile (For those who don't know how to insert that on .bash_profile, touch ~/.bash_profile; open ~/.bash_profile, copy and paste the source provided, save it, restart the terminal window )
 	and just call it with `list_xcode_provisioning_profiles` from a terminal.
 	```
@@ -610,7 +610,7 @@ $ toolchain update touchtracer-ios
 		while IFS= read -rd '' f; do
 			2> /dev/null /usr/libexec/PlistBuddy -c 'Print :Entitlements:application-identifier' /dev/stdin \
 				<<< $(security cms -D -i "$f")
-
+	
 		done < <(find "$HOME/Library/MobileDevice/Provisioning Profiles" -name '*.mobileprovision' -print0)
 	}
 	```
@@ -667,11 +667,11 @@ Command PhaseScriptExecution failed with a nonzero exit code</summary>
 到 Project setting targets > Build Phases > Run Script>
 勾選 ☑For install builds only
 
-![1*soYRMezHfxS00mZQzC6Rfw.webp](../../_resources/1_soYRMezHfxS00mZQzC6Rfw-1.webp)
+![1*soYRMezHfxS00mZQzC6Rfw.webp](:/58cdf3a10b4747b3ba9d464267c26a2c)
 
 如果是Xcode 12以下，勾選 Run script only when installing
 
-![1*hLq4dZTxC4mI8mc3fwPIZw.webp](../../_resources/1_hLq4dZTxC4mI8mc3fwPIZw-1.webp)
+![1*hLq4dZTxC4mI8mc3fwPIZw.webp](:/d0c4dc003c6743a68eaa9a26e330d5cc)
 
 ---
 
@@ -832,7 +832,7 @@ buildozer android debug deploy run
 注意: 第一次build時會連Android需要的NDK之類的大包也一起編譯,需要蠻長的時間2-3小時
 
 編譯完後的 android .apk檔會放在專案資料夾內的 bin 資料夾底下
-![android_app.png](../../_resources/android_app-1.png)
+![android_app.png](https://i.imgur.com/6DUFU1r.png)
 
 [使用 adb工具安裝apk, adb logcat 排查debug](https://shengyu7697.github.io/android-adb/)
 在 adb logcat 只偵錯python訊息:
@@ -856,7 +856,7 @@ adb logcat -s python
 03-17 20:10:09.214  4188  4229 I python  : Python for android ended.
 ```
 => workaround : 改用 bs4 模組(BeautifulSoup)
-[kivy 沒支援目前版本(4.9.2)的 lxml 的 alternative 方案 ＝》beautifulSoup, xml2dict,  pyquery .](../../undefined)
+[kivy 沒支援目前版本(4.9.2)的 lxml 的 alternative 方案 ＝》beautifulSoup, xml2dict,  pyquery .](:/a383e72d8b8c486a9ee833164c750c93)
 
 ---
 </details>
@@ -1193,7 +1193,7 @@ You have the possibility to configure on any command the PATH to the SDK, NDK an
 - arch 為設定目標平台
 - release為是否釋出之版本
  其他像whitelist、blacklist有空要再了解一下，似乎可避免打包後檔案過肥的問題
-執行完成後，會在當下目錄產生APK檔，即可安裝入android系統內。
+ 執行完成後，會在當下目錄產生APK檔，即可安裝入android系統內。
 
 ```
 p4a apk --private /Users/2020mac01/Documents/測量與空間資訊_project/xml_parser練習/kivy_測試_android/basic_apk_資料夾/ \
