@@ -1,7 +1,7 @@
+
 # Breadcrumbslabel_img_xml_modify_script
 
 ---
-
 (完成) 存取手機內的檔案
 (未完成) iOS->非同步呼叫camera和auto_predictor
 (完成) Android crash
@@ -568,20 +568,20 @@ $ toolchain update touchtracer-ios
 
 1 - 到 Xcode Preferences 把 Apple ID account 加到 Xcode
 
-![af7a4bd7-3d11-48fc-b8f6-63cbd5092094.png](../../_resources/af7a4bd7-3d11-48fc-b8f6-63cbd5092094.png)
+![af7a4bd7-3d11-48fc-b8f6-63cbd5092094.png](../../_resources/af7a4bd7-3d11-48fc-b8f6-63cbd5092094-1.png)
 
 2 - 點 Manage Certificates 後, 點左下方的 + 並點擊 Apple Development  
 
-![be687877-a6e8-4f46-9bf2-17e27bf79a77.png](../../_resources/be687877-a6e8-4f46-9bf2-17e27bf79a77.png)
+![be687877-a6e8-4f46-9bf2-17e27bf79a77.png](../../_resources/be687877-a6e8-4f46-9bf2-17e27bf79a77-1.png)
 
 3- 在 Project Navigator 點選我們的 Apps project , 然後點擊 "Signing & Capibilities" 
-![eb0c5c67-6107-459c-babb-4884b2bb31fe.png](../../_resources/eb0c5c67-6107-459c-babb-4884b2bb31fe.png)
+![eb0c5c67-6107-459c-babb-4884b2bb31fe.png](../../_resources/eb0c5c67-6107-459c-babb-4884b2bb31fe-1.png)
 
 4 - 最後點擊 Team 選擇自己的 developer team, 一般是自己的 (Personal Team) 
 
 #### Xcode project Build settings
 
-![スクリーンショット 2023-02-04 午後3.47.24.png](../../_resources/スクリーンショット%202023-02-04%20午後3.47.24.png)
+![スクリーンショット 2023-02-04 午後3.47.24.png](../../_resources/スクリーンショット%202023-02-04%20午後3.47.24-1.png)
 
 這邊有幾個要注意的設定,沒有做到會導致 build failed
 
@@ -667,11 +667,11 @@ Command PhaseScriptExecution failed with a nonzero exit code</summary>
 到 Project setting targets > Build Phases > Run Script>
 勾選 ☑For install builds only
 
-![1*soYRMezHfxS00mZQzC6Rfw.webp](../../_resources/1_soYRMezHfxS00mZQzC6Rfw.webp)
+![1*soYRMezHfxS00mZQzC6Rfw.webp](../../_resources/1_soYRMezHfxS00mZQzC6Rfw-1.webp)
 
 如果是Xcode 12以下，勾選 Run script only when installing
 
-![1*hLq4dZTxC4mI8mc3fwPIZw.webp](../../_resources/1_hLq4dZTxC4mI8mc3fwPIZw.webp)
+![1*hLq4dZTxC4mI8mc3fwPIZw.webp](../../_resources/1_hLq4dZTxC4mI8mc3fwPIZw-1.webp)
 
 ---
 
@@ -832,7 +832,7 @@ buildozer android debug deploy run
 注意: 第一次build時會連Android需要的NDK之類的大包也一起編譯,需要蠻長的時間2-3小時
 
 編譯完後的 android .apk檔會放在專案資料夾內的 bin 資料夾底下
-![android_app.png](../../_resources/android_app.png)
+![android_app.png](../../_resources/android_app-1.png)
 
 [使用 adb工具安裝apk, adb logcat 排查debug](https://shengyu7697.github.io/android-adb/)
 在 adb logcat 只偵錯python訊息:
