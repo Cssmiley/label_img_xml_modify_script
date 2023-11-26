@@ -1,6 +1,9 @@
 # label_img_xml_modify_script
+---
 
-
+(完成) 存取手機內的檔案
+(未完成) iOS->非同步呼叫camera和auto_predictor
+(完成) Android crash
 參考: 
 - [codemy-kivy GUI tutorial](https://www.youtube.com/playlist?list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg)參考第#14部 update kivy .kv 檔的方法
 - [kivy 資源](:/af0765d50f0e48859d9d6877f6333358)
@@ -303,6 +306,7 @@ print("service running...")
 
 - 非同步在activity 和 service 傳送訊息:
 (版本過舊已淘汰,但可參考方法)[Building a background application on android with Kivy](https://blog.kivy.org/2014/01/building-a-background-application-on-android-with-kivy/)
+
 ```
 kivy android背景執行時可以用service執行,但是啟動以後要讓androdi Activity 和 service 溝通
 ,在 android 會使用 Broadcast 來做到,但是要用kivy pyjunius 做到不容易.
@@ -319,9 +323,10 @@ What is OSC.
 OpenSoundControl is an UDP based network protocol, that is designed for fast dispatching of time-sensitive messages, as the name suggests, it was designed as a replacement for MIDI, but applies well to other situations. The protocol is simple to use, OSC addresses look like http URLs, and accept various basic types, such as string, float, int, etc. You can think of it basically as an http POST, with less overhead.
 
 You can learn more about OSC on OpenSoundControl.org
+```
 
 基本例子.
-Server 端
+- Server 端
 ```
 from oscpy.server import OSCThreadServer
 from time import sleep
@@ -336,7 +341,7 @@ def callback(*values):
 sleep(1000)
 osc.stop()
 ```
-Client 端
+- Client 端
 ```
 from oscpy.client import OSCClient
 
@@ -354,7 +359,7 @@ for i in range(10):
 
 </details>
 
-<details> <summary>ios非同步處理 </summary>
+<details> <summary>( 未完成) ios非同步處理 </summary>
 
 [iOS限定]
 
@@ -528,6 +533,7 @@ AttributeError: 'bytes' object has no attribute 'encode'
 在建立 Xcode 專案之前,先確認我們的主程式進入點檔案名稱必須是main.py
 
 建立 xcode project, 把下面命令的 title 換成想要的專案名稱,不能使用空白或是禁止的特殊符號, 把 app_directory 置換成放主程式的 app 專案資料夾路徑
+
 ```
 $ toolchain create <title> <app_directory>
 ```
